@@ -1,0 +1,207 @@
+html {
+  font-size: 62.5%;
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  background-color: #000;
+  font-family: "Lato-Regular", Arial, Helvetica, sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+  max-width: 1366px;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin-top: 0;
+}
+
+li {
+  list-style: none;
+}
+
+@font-face {
+  font-family: "Lato-Regular";
+  src: url("/fonts/lato/regular.ttf");
+}
+
+@font-face {
+  font-family: "FiraSans-Medium";
+  src: url("/fonts/fira_sans/medium.ttf");
+}
+
+@font-face {
+  font-family: "FiraSans-Bold";
+  src: url("/fonts/fira_sans/bold.ttf");
+}
+
+@font-face {
+  font-family: "Carumba-Regular";
+  src: url("/fonts/carumba/regular.ttf");
+}
+
+h1 {
+  font-size: clamp(3rem, 7vw, 4.5rem);
+  font-family: "FiraSans-Medium", sans-serif;
+  font-weight: 100;
+}
+
+h2 {
+  font-size: clamp(2.2rem, 3.5vw, 3.7rem);
+  font-family: "FiraSans-Medium", sans-serif;
+  font-weight: 100;
+}
+
+h3 {
+  font-size: clamp(1.6rem, 5vw, 3.2rem);
+  font-family: "FiraSans-Medium", sans-serif;
+  font-weight: 100;
+}
+
+h4 {
+  font-size: clamp(1.8rem, 5vw, 2.2rem);
+  font-family: "FiraSans-Medium", sans-serif;
+  font-weight: 100;
+}
+
+h5 {
+  font-size: clamp(1.4rem, 2vw, 1.6rem);
+  font-family: "FiraSans-Light", sans-serif;
+  font-weight: 100;
+}
+
+h6 {
+  font-size: 6rem;
+}
+
+p {
+  font-size: clamp(1.45rem, 3vw, 1.7rem);
+  font-family: "Lato-Regular";
+  font-weight: 100;
+  margin: 0;
+  line-height: 1.7;
+  text-align: justify;
+  margin-top: 1.5rem;
+}
+
+ul {
+  margin-bottom: 0;
+}
+
+li {
+  margin: 0;
+  font-size: clamp(1.45rem, 3vw, 1.7rem);
+  font-family: "Lato-Regular";
+  font-weight: 100;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "FiraSans-Medium";
+  font-weight: 100;
+}
+
+.arrow-link {
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+  width: max-content;
+  display: flex;
+  align-items: center;
+}
+.arrow-link a {
+  text-transform: uppercase;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  letter-spacing: 0.55px;
+}
+.arrow-link span img {
+  height: 11px;
+  transition: all 0.7s;
+  opacity: 0;
+  display: inline-block;
+  margin-top: 1px;
+}
+.arrow-link:hover span img {
+  transform: translateX(15px);
+  opacity: 1;
+}
+
+label {
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+  font-family: "Lato-Regular", sans-serif;
+  font-size: clamp(1.45rem, 3vw, 1.5rem);
+}
+
+input,
+textarea {
+  box-sizing: border-box;
+  padding: 1rem 1.5rem;
+  letter-spacing: 0.3px;
+  font-size: 1.5rem;
+  font-family: "Lato-Regular", sans-serif;
+  border: none;
+  border-radius: 2.5px;
+  color: #151515;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+textarea::placeholder {
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+  font-family: "Lato-Bold", sans-serif;
+  color: #000;
+}
+
+button {
+  color: #fff;
+  font-family: "FiraSans-Bold", sans-serif;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  padding: 1.2rem 1.5rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  transition: all 0.7s;
+}
+button:hover {
+  background-color: white;
+  color: #000;
+  border: 2px solid transparent;
+}
+
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+p::selection,
+li::selection,
+a::selection,
+span::selection {
+  background-color: rgba(51, 68, 223, 0.5);
+  background-color: #20b830;
+}

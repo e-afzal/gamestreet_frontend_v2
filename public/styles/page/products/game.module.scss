@@ -1,0 +1,182 @@
+section#game_content {
+  max-width: 1920px;
+  padding-inline: clamp(2rem, 5vw, 7rem);
+
+  p {
+    text-align: left;
+  }
+
+  img.bgd_image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: contain;
+    filter: opacity(0.1) grayscale(1);
+    z-index: -1;
+  }
+
+  .game_grid {
+    display: grid;
+    grid-template-columns: 45% 50%;
+    justify-content: space-between;
+    // border: 1px solid red;
+    .game_details {
+      max-width: 540px;
+      .game_brief {
+        margin-bottom: 10rem;
+
+        hr {
+          margin-block: clamp(1rem, 3vw, 3rem);
+        }
+        h5.game_publisher {
+          color: #b4b4b4;
+          font-family: "FiraSans-Medium";
+          margin-block: 1rem;
+        }
+        h4.game_price {
+          color: #20b830;
+        }
+
+        form.cart_form {
+          h5 {
+            margin-bottom: 1.5rem;
+            font-size: clamp(1.45rem, 2vw, 1.7rem);
+          }
+
+          select {
+            background-color: transparent;
+            border: 1px solid #fff;
+            color: #fff;
+            font-family: "Lato-Regular", sans-serif;
+            padding: 1rem 1.5rem;
+            border-radius: 5px;
+            option {
+              background-color: transparent;
+              color: #000;
+            }
+          }
+
+          .form_group {
+            display: flex;
+
+            &:nth-child(3) > label:nth-child(4) {
+              margin-left: 3rem;
+            }
+
+            label {
+              font-size: clamp(1.35rem, 1.5vw, 1.6rem);
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              height: 4.5rem;
+              width: 9.5rem;
+              border: 1px solid #fff;
+              border-radius: 5px;
+              cursor: pointer;
+
+              transition: 0.5s;
+            }
+            input {
+              &[type="radio"] {
+                // appearance: none;
+                display: none;
+                &:checked + label {
+                  background-color: #fff;
+                  color: #151515;
+                  box-shadow: 0 15px 45px rgba(255, 255, 255, 0.2);
+                }
+              }
+            }
+          }
+          button {
+            margin-top: 3rem;
+            width: 100%;
+            background-color: #20b830;
+            border: none;
+            text-transform: uppercase;
+            &:hover {
+              color: #fff;
+              box-shadow: 0px 0px 45px rgba($color: #20b830, $alpha: 0.25);
+            }
+          }
+        }
+      }
+
+      .about_game {
+        p.about_description {
+          color: #b4b4b4;
+          margin-top: 5px;
+        }
+
+        .about_grid_details {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          column-gap: 1rem;
+          margin-top: 5px;
+          .about_grid_detail {
+            :nth-child(1) {
+              font-family: "FiraSans-Medium";
+            }
+            :nth-child(2) {
+              color: #a8a8a8;
+              margin-top: 0px;
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+    .game_gallery {
+      // border: 1px solid red;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    // #game_content stacked grid
+    grid-template-columns: 1fr;
+
+    .game_details {
+      order: 2;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .game_details {
+      .game_brief {
+        width: 100%;
+        margin-bottom: 5rem;
+      }
+    }
+  }
+
+  // GAME GALLERY
+  .game_gallery {
+    @media screen and (max-width: 768px) {
+      order: 1;
+    }
+  }
+}
+
+// MEDIA QUERY
+@media screen and (max-width: 811px) {
+  section#game_content {
+    .game_grid {
+      grid-template-columns: 100%;
+      .game_details {
+        order: 2;
+      }
+      .game_gallery {
+        margin-bottom: 5rem;
+        h1 {
+          display: none;
+        }
+        order: 1;
+      }
+    }
+  }
+}

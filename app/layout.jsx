@@ -1,4 +1,10 @@
+// GLOBAL STYLE
 import "./globals.css";
+
+// COMPONENTS
+import Navbar from "@/app/components/Navbar";
+import NavbarMobile from "@/app/components/NavbarMobile";
+import Footer from "@/app/components/Footer";
 
 export const metadata = {
   // title: 'Create Next App',
@@ -8,7 +14,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        <NavbarMobile />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
